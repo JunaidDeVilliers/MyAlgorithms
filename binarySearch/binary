@@ -1,0 +1,47 @@
+Search (array, target)
+{
+    left = 0
+    right = array.length - 1
+
+    while (left <= right)
+        middle = (left + right)/2
+
+        if(array[middle] == target)
+            return middle
+        else if (array[middle] > target)
+            right = middle - 1
+        else
+            left = middle + 1
+    end while loop
+
+    return -1
+}
+
+EXPLANATIONS
+
+Line - 1
+Calling the the search method with the array you want to search in and the target you want to search for as the 2 parameters.
+
+Lines - 3 & 4
+Setting the first and last values in the array as the start and end point of the search (LEFT and RIGHT).
+
+Line - 6
+while loop to ensure that the right value remains larger or equal to the left value because if the left value is larger is means the whole array was searched yet the target number was not found
+
+Line - 7
+Adding left and right and dividing it by 2 to find the MIDDLE of the array.
+
+Line - 9 & 10
+Checking if the number in the middle of the array is the target and if it is we return it.
+
+Line - 11 & 12
+If your target is less then the middle number of the array, change the right value to the middle value and repeat the loop. This effectively cuts off the right half of the array as we know that the value is not there.
+
+Line - 13 & 14
+If your target is more then the middle number of the array, change the left value to the middle value and repeat the loop. This effectively cuts off the left half of the array as we know that the value is not there.
+
+Line - 15
+End of the while loop
+
+Line - 17
+If the loop end and the number was not found, we return -1 to the main method.

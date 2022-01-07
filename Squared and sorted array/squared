@@ -1,0 +1,47 @@
+public static int[] SortedSquares(int[] input)
+    int[] output = new int[input.length]
+    int left = 0
+    int right = input.length - 1
+
+    for(int i = input.length - 1; i >= 0; i--)
+        if(Math.Abs(input[left]) > input[right])
+            output[i] = input[left] * input[left]
+            left++
+        else
+            output[i] = input[right] * input[right]
+            right--
+        endif
+    endloop
+
+    return output
+endmethod
+
+
+
+Line 1
+Method is called passing an array as a parameter
+
+Line 2
+creating a new array with the same length to store the sorted array in 
+
+Lines 3 & 4
+setting left and right variables for the beginning and the end of the array
+
+Line 6
+creating a loop that will loop through the array from the last value to the first
+
+Line 7 & 8
+checking if the absolute value of the first number in the array is greater then the last and if it is we square it and set it at the last value of the output array
+
+Line 9
+since we already checked the first value of the array, we increment the left value by one so that the next comparisson starts at the second value
+
+Line 10 & 11
+checking if the value of the last number in the array is greater then the absolute value of the first and if it is we square it and set it at the last value of the output array
+
+Line 12
+since we already checked the last value of the array, we decrement the right value by one so that the next comparisson starts at the second last value
+
+Line 16
+we return the squared and sorted array
+
