@@ -20,6 +20,7 @@ namespace binarySearch
             }
         }
 
+
         public static int Search(int[] nums, int target)
         {
             int left = 0;

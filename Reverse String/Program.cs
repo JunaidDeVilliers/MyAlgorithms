@@ -8,6 +8,7 @@ namespace ReverseString
 
             ReverseString(name);
         }
+        
         public static void ReverseString(char[] s)
         {
             int left = 0;
